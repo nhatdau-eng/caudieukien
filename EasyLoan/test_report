@@ -1,0 +1,64 @@
+
+const mockUsers = [
+
+    // Case 1: Tài khoản bị khóa
+    {
+        name: "User Locked",
+        isActive: false,
+        age: 25,
+        income: 15000000,
+        creditScore: 700,
+        hasBadDebt: false
+    },
+
+    // Case 2: Chưa đủ tuổi
+    {
+        name: "User Underage",
+        isActive: true,
+        age: 16,
+        income: 15000000,
+        creditScore: 700,
+        hasBadDebt: false
+    },
+
+    // Case 3: Thu nhập không đủ
+    {
+        name: "User Low Income",
+        isActive: true,
+        age: 25,
+        income: 5000000,
+        creditScore: 700,
+        hasBadDebt: false
+    },
+
+    // Case 4: Điểm tín dụng thấp
+    {
+        name: "User Low Credit",
+        isActive: true,
+        age: 25,
+        income: 15000000,
+        creditScore: 600,
+        hasBadDebt: false
+    },
+
+    // Case 5: Có nợ xấu
+    {
+        name: "User Bad Debt",
+        isActive: true,
+        age: 25,
+        income: 15000000,
+        creditScore: 700,
+        hasBadDebt: true
+    },
+
+    // Case 6: Đủ điều kiện vay
+    {
+        name: "User Success",
+        isActive: true,
+        age: 25,
+        income: 15000000,
+        creditScore: 700,
+        hasBadDebt: false
+    }
+
+];
