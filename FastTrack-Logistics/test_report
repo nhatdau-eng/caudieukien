@@ -1,0 +1,12 @@
+| Test Case        | Kết quả mong đợi  |
+| ---------------- | ----------------- |
+| STANDARD + 3kg   | 20000             |
+| STANDARD + 10kg  | 30000             |
+| STANDARD + 25kg  | 70000             |
+| EXPRESS + 2kg    | 40000             |
+| EXPRESS + 15kg   | 50000             |
+| SAME_DAY + 30kg  | 130000            |
+| serviceType sai  | lỗi               |
+| serviceType rỗng | lỗi               |
+| weight âm        | lỗi               |
+| weight = 5/20/21 | kiểm tra boundary |
