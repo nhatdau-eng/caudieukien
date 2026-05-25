@@ -1,0 +1,10 @@
+| TC ID | customerTier | orderTotal | Expected Output | Mục tiêu          |
+| ----- | ------------ | ---------- | --------------- | ----------------- |
+| TC01  | MEMBER       | 100000     | 10              | Luồng MEMBER      |
+| TC02  | VIP          | 499999     | 49              | Dưới biên         |
+| TC03  | VIP          | 500000     | 100             | Đúng biên         |
+| TC04  | VIP          | 500001     | 100             | Trên biên         |
+| TC05  | VIP          | 200000     | 20              | VIP bình thường   |
+| TC06  | GOLD         | 100000     | -1              | Hạng không hợp lệ |
+| TC07  | VIP          | 0          | 0               | Giá trị đặc biệt  |
+| TC08  | VIP          | -50000     | -5 hoặc reject  | Giá trị âm        |
