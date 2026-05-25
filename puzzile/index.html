@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đổi Hình</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial;
+
+            background: #f2f2f2;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+        }
+
+        .container {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .images {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin: 20px 0;
+        }
+
+        .box {
+
+            width: 70px;
+
+            height: 70px;
+
+            background: #eee;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 40px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .box:hover {
+
+            transform: scale(1.1);
+        }
+
+        #result {
+
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎮 Game Đổi Hình</h1>
+
+        <p>
+            Làm cho tất cả thành 🐱
+        </p>
+
+        <div class="images">
+
+            <div class="box" onclick="changeImage(this)">
+                🐶
+            </div>
+
+            <div class="box" onclick="changeImage(this)">
+                🐼
+            </div>
+
+            <div class="box" onclick="changeImage(this)">
+                🐱
+            </div>
+
+            <div class="box" onclick="changeImage(this)">
+                🐶
+            </div>
+
+            <div class="box" onclick="changeImage(this)">
+                🐼
+            </div>
+
+        </div>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        let images = ["🐱", "🐶", "🐼"];
+
+        function changeImage(element) {
+
+            let randomIndex =
+                Math.floor(Math.random() * images.length);
+
+            element.innerText =
+                images[randomIndex];
+
+            checkWin();
+        }
+
+        function checkWin() {
+
+            let boxes =
+                document.querySelectorAll(".box");
+
+            let win = true;
+
+            for (let box of boxes) {
+
+                if (box.innerText !== "🐱") {
+
+                    win = false;
+                }
+            }
+
+            let result =
+                document.getElementById("result");
+
+            if (win) {
+
+                result.innerText =
+                    "🎉 Chiến thắng!";
+
+                result.style.color =
+                    "green";
+
+            } else {
+
+                result.innerText =
+                    "";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
