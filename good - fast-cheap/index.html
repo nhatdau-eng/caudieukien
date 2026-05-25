@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Good Cheap Fast</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: #ffffff;
+
+            font-family: Arial;
+        }
+
+        .container {
+
+            background: #4d310d;
+
+            padding: 50px;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 50px;
+        }
+
+        .item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .toggle  {
+
+            width: 120px;
+
+            height: 55px;
+
+            background: rgba(85, 61, 61, 0.705);
+
+            border-radius: 50px;
+
+            position: relative;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .circle {
+
+            width: 50px;
+
+            height: 50px;
+
+            background: rgb(34, 32, 32);
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            top: 2px;
+
+            left: 3px;
+
+            transition: 0.3s;
+        }
+
+        .toggle.active {
+
+            background: #e2e4de;
+        }
+
+        .toggle.active .circle {
+
+            left: 65px;
+        }
+
+        .text {
+
+            font-size: 50px;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item">
+
+            <div class="toggle green" onclick="toggleSwitch(this)">
+
+                <div class="circle"></div>
+
+            </div>
+
+            <div class="text">
+                GOOD
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <div class="toggle blue" onclick="toggleSwitch(this)">
+
+                <div class="circle"></div>
+
+            </div>
+
+            <div class="text">
+                CHEAP
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <div class="toggle gray" onclick="toggleSwitch(this)">
+
+                <div class="circle"></div>
+
+            </div>
+
+            <div class="text">
+                FAST
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src = "main.js"></script>
+
+</body>
+
+</html>
