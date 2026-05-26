@@ -1,0 +1,19 @@
+test 
+=== KIỂM THỬ HỆ THỐNG TÍNH PHÍ GIAO DỊCH ===
+
+Test 1 - DEPOSIT 500k: 0
+
+Test 2 - WITHDRAW 800k: 1100
+
+Test 3 - WITHDRAW 2 triệu: 2200
+
+Test 4 - TRANSFER 6 triệu: 7000
+
+Test 5 - PAYMENT 1 triệu:
+Lỗi: Loại giao dịch không được hỗ trợ!
+
+Test 6 - Empty transaction type:
+Lỗi: Loại giao dịch không được hỗ trợ!
+
+Test 7 - TRANSFER -5000:
+Lỗi: Số tiền không hợp lệ!
