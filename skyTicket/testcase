@@ -1,0 +1,8 @@
+| Test Case | Mục tiêu              | Kết quả |
+| --------- | --------------------- | ------- |
+| TC01      | Đặt vé thành công     | ✅       |
+| TC02      | Chưa đăng nhập        | ✅       |
+| TC03      | Hộ chiếu không hợp lệ | ✅       |
+| TC04      | Chưa đủ 18 tuổi       | ✅       |
+| TC05      | Hết chỗ               | ✅       |
+| TC06      | Không đủ số dư        | ✅       |
