@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác</title>
+</head>
+<body>
+
+    <h1>Kiểm tra 3 số có là cạnh tam giác không</h1>
+
+    <label>Nhập a:</label>
+    <input type="number" id="a">
+
+    <label>Nhập b:</label>
+    <input type="number" id="b">
+
+    <label>Nhập c:</label>
+    <input type="number" id="c">
+
+    <button onclick="checkTriangle()">Kiểm tra</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function checkTriangle() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = Number(document.getElementById("c").value);
+
+            let result;
+
+             if (a > 0 && b > 0 && c > 0 &&
+                a + b > c &&
+                a + c > b &&
+                b + c > a) {
+                result = "Đây là 3 cạnh của một tam giác";
+            } else {
+                result = "Không phải tam giác";
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>

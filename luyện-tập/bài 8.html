@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+
+    <h1>Kiểm tra số có phải là tuổi hợp lệ không</h1>
+
+    <label>Nhập tuổi:</label>
+    <input type="number" id="age">
+
+    <button onclick="checkAge()">Kiểm tra</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function checkAge() {
+            let age = Number(document.getElementById("age").value);
+
+            let result;
+
+            if (age > 0 && age <= 120) {
+                result = "Đây là tuổi hợp lệ";
+            } else {
+                result = "Không phải tuổi hợp lệ";
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>

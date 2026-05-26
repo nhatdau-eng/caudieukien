@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang ="vi">
+    <head> 
+        <meta charset="UTF-8">
+        <title>Đổi m sang feet </title>
+    </head>
+    <body> 
+        <h1>Chuyển đổi độ cao </h1>
+        <label>Nhập m </label>
+        <input type="number "id = "meter">
+        <button onclick="convertTempertature()">Chuyển đổi</button>
+        <h2 id ="result"></h2>
+        <script>
+            function convertTempertature(){
+                let meter = 
+                Number(document.getElementById("meter").value);
+                let feet = meter *3.2808;
+                document.getElementById("result").innerText=
+                   "Feet: " + feet;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+
+    <h1>Giải phương trình bậc 2: ax^2 + bx + c = 0</h1>
+
+    <label>Nhập a:</label>
+    <input type="number" id="a">
+    <label>Nhập b:</label>
+    <input type="number" id="b">
+      <label>Nhập c:</label>
+    <input type="number" id="c">
+
+    <button onclick="giaiPTBac2()">Giải phương trình Bậc  2</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function giaiPTBac2() {
+             let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = Number(document.getElementById("c").value);
+            let result;
+            if (a === 0) {
+       result ="Không phải phương trình bậc 2";
+    }else{
+
+    let delta = b * b - 4 * a * c;
+
+    if (delta < 0) {
+        result ="Vô nghiệm";
+    } else if (delta === 0) {
+        let x = -b / (2 * a);
+        result ="Nghiệm kép x = " + x;
+    } else {
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        result ="x1 = " + x1 + ", x2 = " + x2;
+    }
+}
+    document.getElementById("result").innerText = result;
+}
+    </script>
+
+</body>
+</html>

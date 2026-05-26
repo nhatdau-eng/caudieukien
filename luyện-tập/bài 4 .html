@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Chữ Nhật</title>
+</head>
+
+<body>
+
+    <h1>Tính Diện Tích Hình Chữ Nhật</h1>
+
+    <label>Nhập cạnh a:</label>
+    <input type="number" id="a">
+    <label> Nhập cạnh b:</label>
+    <input type="number" id="b">
+
+   
+    <button onclick="tinhDienTich()">Tính diện tích  </button>
+    <h2 id="result"></h2>
+    <script>
+        function tinhDienTich() {
+            let a =
+                Number(document.getElementById("a").value);
+             let b =
+                Number(document.getElementById("b").value);
+
+            let dienTich =
+                a * b;
+
+            document.getElementById("result").innerText =
+                "Diện tích = " + dienTich;
+        }
+
+    </script>
+
+</body>
+
+</html>
